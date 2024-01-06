@@ -12,7 +12,10 @@ export default defineConfig({
         main: resolve(__dirname, 'homepage.html'),
       },
     },
-    outDir: 'pages',
+    outDir: 'pages/homepage',
   },
+  server: {
+    open: './homepage.html'
+  }
 });
 
