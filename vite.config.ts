@@ -15,7 +15,8 @@ export default defineConfig({
     outDir: 'pages/homepage',
   },
   server: {
-    open: './homepage.html'
+    open: './homepage.html',
+    port: 5500,
   }
 });
 

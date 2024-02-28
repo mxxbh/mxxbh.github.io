@@ -5,6 +5,7 @@ import DividerText from './components/DividerText.vue';
 
 <template>
   <div class="app-container">
+    <a href="/pages/learning-note/index.html">笔记</a>
     <DividerText class="divider-text" />
     <div class="content">
       <GlobalAnimation />
