@@ -2,10 +2,10 @@
 </script>
 
 <template>
-  <div class="building-floor floor002"></div>
+  <div class="building-floor floor005"></div>
 </template>
 
 <style scoped lang="scss">
-.floor002 {
+.floor005 {
 }
 </style>

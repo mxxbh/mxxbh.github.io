@@ -8,6 +8,10 @@
   position: relative;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  border-left: var(--building-border);
+  border-right: var(--building-border);
+  border-color: transparent;
   &::before {
     content: "";
     position: absolute;
@@ -15,20 +19,21 @@
     left: 10%;
     width: 30%;
     height: 30%;
-    background-color: #69493d;
-    border: 8px solid #000;
-    border-radius: 10px;
+    background-color: var(--building-wall-color);
+    border: var(--building-border);
+    border-radius: var(--building-border-radius);
   }
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -5%;
-    right: -5%;
+    left: -8%;
+    right: -8%;
     height: 15%;
-    background-color: #69493d;
-    border: 8px solid #000;
-    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: var(--building-wall-color);
+    border: var(--building-border);
+    border-radius: var(--building-border-radius);
   }
 }
 </style>
