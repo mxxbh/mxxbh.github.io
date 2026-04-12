@@ -29,6 +29,7 @@ const focusedManager = useFocusedManager();
   position: relative;
   z-index: 1;
   width: 40%;
+  max-width: 1000px;
   min-height: 100vh;
   margin: auto;
   display: flex;

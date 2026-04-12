@@ -30,7 +30,7 @@ const isFocused = computed(() => {
 
 <template>
   <div class="building-unit" @click="handleClick" :class="{ 'is-focused': isFocused }">
-    <div v-if="props.needBalcony" class="unit-Balcony">
+    <div v-if="props.needBalcony" class="unit-balcony">
       <div class="floor-door"></div>
       <div class="floor-window"></div>
       <div class="floor-railing"></div>
@@ -46,12 +46,13 @@ const isFocused = computed(() => {
   box-sizing: border-box;
   position: relative;
   &.is-focused {
-    .unit-Balcony {
+    .unit-balcony {
       opacity: 0;
+      pointer-events: none;
     }
   }
 }
-.unit-Balcony {
+.unit-balcony {
   --glass-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   left: 0;
