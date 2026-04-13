@@ -43,7 +43,7 @@ const focusedManager = useFocusedManager();
   flex: 1;
 }
 .building-foundation {
-  margin: 0 -8%;
+  margin: 0 -32px;
   aspect-ratio: 12;
   box-sizing: border-box;
   background-color: rgb(156, 122, 110);

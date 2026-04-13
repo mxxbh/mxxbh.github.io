@@ -114,8 +114,8 @@ const isFocused = computed(() => {
 .floor-railing {
   position: absolute;
   bottom: 0;
-  left: -8%;
-  right: -8%;
+  left: -24px;
+  right: -24px;
   height: 40%;
   box-sizing: border-box;
   background-color: var(--building-wall-color);

@@ -27,10 +27,9 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: -8%;
-    right: -8%;
+    left: -24px;
+    right: -24px;
     height: 15%;
-    box-sizing: border-box;
     background-color: var(--building-wall-color);
     border: var(--building-border);
     border-radius: var(--building-border-radius);

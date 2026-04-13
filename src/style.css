@@ -1,6 +1,7 @@
-body {
+html,body {
   margin: 0;
   touch-action: manipulation;
+  overflow-x: hidden;
 }
 
 #app {

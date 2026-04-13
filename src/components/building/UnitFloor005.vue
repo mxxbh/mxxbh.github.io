@@ -8,7 +8,7 @@ const handleClick = () => {
   <div class="building-floor floor005">
     <div class="container" @click.stop>
       <h2 class="title">Learning Note</h2>
-      <p class="desc">前端学习笔记，专注前端开发技术归纳，收录常见功能实现方案和常见问题，持续更新中～</p>
+      <p class="desc">前端学习笔记，收录前端开发技术和常见功能实现方案与问题，持续更新中～</p>
       <button class="button" @click="handleClick">前往查看</button>
     </div>
   </div>
@@ -16,9 +16,14 @@ const handleClick = () => {
 
 <style scoped lang="scss">
 .floor005 {
-  padding: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .container {
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
+    max-width: 80%;
+    padding: 10px;
     font-family: "Comic Sans MS", "Comic Neue", "Marker Felt", "Chalkboard SE", cursive, sans-serif;
     text-align: center;
     background: #fffcf5;
@@ -27,7 +32,6 @@ const handleClick = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     gap: 10px;
     overflow: hidden;
     .title {
