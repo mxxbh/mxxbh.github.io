@@ -2,10 +2,17 @@
 import { computed } from "vue";
 import { useFocusedManager } from "../stores/focusedManager";
 
-const props = withDefaults(defineProps<{ needBalcony?: boolean; floorIdx?: number }>(), {
-  needBalcony: true,
-  floorIdx: 0,
-});
+const props = withDefaults(
+  defineProps<{
+    needBalcony?: boolean;
+    floorIdx?: number;
+    title?: string;
+  }>(),
+  {
+    needBalcony: true,
+    floorIdx: 0,
+  },
+);
 const focusManager = useFocusedManager();
 
 const handleClick = (e: MouseEvent) => {
@@ -33,7 +40,7 @@ const isFocused = computed(() => {
     <div v-if="props.needBalcony" class="unit-balcony">
       <div class="floor-door"></div>
       <div class="floor-window"></div>
-      <div class="floor-railing"></div>
+      <div class="floor-railing">{{ props.title ?? "" }}</div>
     </div>
     <slot />
   </div>
@@ -121,5 +128,15 @@ const isFocused = computed(() => {
   background-color: var(--building-wall-color);
   border: var(--building-border);
   border-radius: var(--building-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SimHei", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", sans-serif;
+  font-weight: bolder;
+  color: #ff9c3e;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>

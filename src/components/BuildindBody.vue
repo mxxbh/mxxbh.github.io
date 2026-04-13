@@ -8,7 +8,12 @@ import UnitRoof from "./building/UnitRoof.vue";
 import BuildingUnit from "./BuildingUnit.vue";
 import { useFocusedManager } from "../stores/focusedManager";
 
-const floorList = [UnitFloor005, UnitFloor004, UnitFloor003, UnitFloor002];
+const floorList = [
+  { component: UnitFloor005, title: "Learning Note" },
+  { component: UnitFloor004, title: "" },
+  { component: UnitFloor003, title: "" },
+  { component: UnitFloor002, title: "MXXBH" },
+];
 const focusedManager = useFocusedManager();
 </script>
 
@@ -16,8 +21,8 @@ const focusedManager = useFocusedManager();
   <div class="building-body" :class="{ 'is-focused': focusedManager.focusedIdx !== 0 }">
     <div class="building-roof-space"></div>
     <BuildingUnit :need-balcony="false"><UnitRoof /></BuildingUnit>
-    <BuildingUnit v-for="idx in floorList.length" :floor-idx="idx">
-      <component :is="floorList[idx - 1]" />
+    <BuildingUnit v-for="idx in floorList.length" :floor-idx="idx" :title="floorList[idx - 1].title">
+      <component :is="floorList[idx - 1].component" />
     </BuildingUnit>
     <BuildingUnit :need-balcony="false"><UnitFloor001 /></BuildingUnit>
     <div class="building-foundation"></div>
