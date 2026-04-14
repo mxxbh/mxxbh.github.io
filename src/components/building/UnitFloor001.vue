@@ -12,7 +12,7 @@
   .floor-door {
     --door-color: rgb(68, 46, 31);
     position: absolute;
-    top: 40%;
+    bottom: 0;
     left: 50%;
     width: 50%;
     height: 70%;
