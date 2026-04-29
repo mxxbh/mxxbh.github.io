@@ -5,7 +5,7 @@ html,body {
 }
 
 #app {
-  --building-wall-color: rgb(136, 83, 61);
+  --building-wall-color: #935a46;
   --building-border-width: 0.5rem;
   --building-border-color: #000;
   --building-border: var(--building-border-width) solid var(--building-border-color);
