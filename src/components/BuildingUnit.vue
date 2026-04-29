@@ -38,6 +38,7 @@ const isFocused = computed(() => {
 <template>
   <div class="building-unit" @click="handleClick" :class="{ 'is-focused': isFocused }">
     <div v-if="props.needBalcony" class="unit-balcony">
+      <div class="floor-divider"></div>
       <div class="floor-door"></div>
       <div class="floor-window"></div>
       <div class="floor-railing">{{ props.title ?? "" }}</div>
@@ -60,7 +61,6 @@ const isFocused = computed(() => {
   }
 }
 .unit-balcony {
-  --glass-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   left: 0;
   top: 0;
@@ -68,23 +68,19 @@ const isFocused = computed(() => {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background:
-    linear-gradient(0, var(--building-wall-color)) no-repeat 100% 100% / 50% calc(45% + 6px),
-    linear-gradient(180deg, var(--building-wall-color) 0 calc(20% + 6px), transparent calc(20% + 6px) 100%),
-    linear-gradient(
-      90deg,
-      var(--building-wall-color) 0 calc(5% + 6px),
-      transparent calc(5% + 6px) calc(35% - 6px),
-      var(--building-wall-color) calc(35% - 6px) calc(55% + 6px),
-      transparent calc(55% + 6px) calc(95% - 6px),
-      var(--building-wall-color) calc(95% - 6px)
-    );
+  background: var(--building-wall-color);
   border-left: var(--building-border);
   border-right: var(--building-border);
-  display: flex;
-  justify-content: space-between;
   opacity: 1;
   transition: opacity 0.5s ease;
+  .floor-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #704031;
+  }
   .floor-door {
     position: absolute;
     top: 20%;
@@ -92,12 +88,15 @@ const isFocused = computed(() => {
     width: 30%;
     height: 75%;
     box-sizing: border-box;
-    background-image: linear-gradient(
-      90deg,
-      var(--glass-color) 0 calc(50% - 4px),
-      var(--building-border-color) calc(50% - 4px) calc(50% + 4px),
-      var(--glass-color) calc(50% + 4px) 100%
-    );
+    background-image:
+      linear-gradient(
+        90deg,
+        transparent 0 calc(50% - 4px),
+        var(--building-border-color) calc(50% - 4px) calc(50% + 4px),
+        transparent calc(50% + 4px) 100%
+      ),
+      linear-gradient(135deg, transparent 0 20%, var(--glass-reflect-color) 20% 60%, transparent 60%);
+    background-color: var(--glass-color);
     border: var(--building-border);
     border-radius: var(--building-border-radius);
   }
@@ -108,12 +107,21 @@ const isFocused = computed(() => {
     width: 40%;
     height: 35%;
     box-sizing: border-box;
-    background-image: linear-gradient(
-      90deg,
-      var(--glass-color) 0 calc(50% - 4px),
-      var(--building-border-color) calc(50% - 4px) calc(50% + 4px),
-      var(--glass-color) calc(50% + 4px) 100%
-    );
+    background-image:
+      linear-gradient(
+        90deg,
+        transparent 0 calc(50% - 4px),
+        var(--building-border-color) calc(50% - 4px) calc(50% + 4px),
+        transparent calc(50% + 4px) 100%
+      ),
+      linear-gradient(
+        135deg,
+        transparent 0 20%,
+        var(--glass-reflect-color) 20% 70%,
+        transparent 70% 80%,
+        var(--glass-reflect-color) 80%
+      );
+    background-color: var(--glass-color);
     border: var(--building-border);
     border-radius: var(--building-border-radius);
   }

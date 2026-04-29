@@ -5,11 +5,13 @@ html,body {
 }
 
 #app {
-  --building-wall-color: #69493d;
-  --building-border-width: 8px;
+  --building-wall-color: rgb(136, 83, 61);
+  --building-border-width: 0.5rem;
   --building-border-color: #000;
   --building-border: var(--building-border-width) solid var(--building-border-color);
-  --building-border-radius: 10px;
+  --building-border-radius: 0.8rem;
+  --glass-color: #fee8b9;
+  --glass-reflect-color: #fcf1d2;
   height: 100vh;
 }
 

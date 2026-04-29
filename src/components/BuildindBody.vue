@@ -51,7 +51,7 @@ const focusedManager = useFocusedManager();
   margin: 0 -32px;
   aspect-ratio: 12;
   box-sizing: border-box;
-  background-color: rgb(156, 122, 110);
+  background-color: var(--building-wall-color);
   border: var(--building-border);
   border-radius: 10px 10px 0 0;
 }
